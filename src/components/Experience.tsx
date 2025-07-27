@@ -2,88 +2,118 @@ import React from 'react';
 import { Calendar, MapPin, Briefcase, GraduationCap, Award, TrendingUp } from 'lucide-react';
 
 const Experience: React.FC = () => {
-  const experiences = [
-    {
-      type: 'work',
-      title: 'Senior Full Stack Developer',
-      company: 'TechCorp Solutions',
-      location: 'San Francisco, CA',
-      period: '2022 - Present',
-      description: 'Leading development of enterprise-scale applications serving 100K+ users. Architecting microservices and implementing DevOps best practices.',
-      achievements: [
-        'Improved application performance by 40% through optimization and caching strategies',
-        'Led a cross-functional team of 8 developers across multiple high-impact projects',
-        'Implemented automated testing pipeline reducing production bugs by 65%',
-        'Mentored 5 junior developers and established coding standards'
-      ],
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      type: 'work',
-      title: 'Full Stack Developer',
-      company: 'InnovateTech Startup',
-      location: 'Remote',
-      period: '2020 - 2022',
-      description: 'Built scalable web applications from concept to deployment. Collaborated with product and design teams to deliver user-centric solutions.',
-      achievements: [
-        'Developed 5 major features that increased user engagement by 35%',
-        'Integrated 15+ third-party APIs and payment processing systems',
-        'Optimized database queries improving response times by 50%',
-        'Established CI/CD pipeline reducing deployment time by 80%'
-      ],
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-      type: 'work',
-      title: 'Frontend Developer',
-      company: 'WebDev Agency',
-      location: 'New York, NY',
-      period: '2018 - 2020',
-      description: 'Created responsive web applications and collaborated with UX/UI designers to deliver pixel-perfect interfaces for diverse clients.',
-      achievements: [
-        'Delivered 25+ client projects with 98% satisfaction rate',
-        'Implemented responsive designs reducing mobile bounce rate by 30%',
-        'Optimized web performance achieving 95+ Lighthouse scores',
-        'Established component library used across 10+ projects'
-      ],
-      color: 'from-purple-500 to-violet-500'
-    }
-  ];
+  // const experiences = [
+  //   {
+  //     type: 'work',
+  //     title: 'Senior Full Stack Developer',
+  //     company: 'TechCorp Solutions',
+  //     location: 'San Francisco, CA',
+  //     period: '2022 - Present',
+  //     description: 'Leading development of enterprise-scale applications serving 100K+ users. Architecting microservices and implementing DevOps best practices.',
+  //     achievements: [
+  //       'Improved application performance by 40% through optimization and caching strategies',
+  //       'Led a cross-functional team of 8 developers across multiple high-impact projects',
+  //       'Implemented automated testing pipeline reducing production bugs by 65%',
+  //       'Mentored 5 junior developers and established coding standards'
+  //     ],
+  //     color: 'from-blue-500 to-cyan-500'
+  //   },
+  //   {
+  //     type: 'work',
+  //     title: 'Full Stack Developer',
+  //     company: 'InnovateTech Startup',
+  //     location: 'Remote',
+  //     period: '2020 - 2022',
+  //     description: 'Built scalable web applications from concept to deployment. Collaborated with product and design teams to deliver user-centric solutions.',
+  //     achievements: [
+  //       'Developed 5 major features that increased user engagement by 35%',
+  //       'Integrated 15+ third-party APIs and payment processing systems',
+  //       'Optimized database queries improving response times by 50%',
+  //       'Established CI/CD pipeline reducing deployment time by 80%'
+  //     ],
+  //     color: 'from-green-500 to-emerald-500'
+  //   },
+  //   {
+  //     type: 'work',
+  //     title: 'Frontend Developer',
+  //     company: 'WebDev Agency',
+  //     location: 'New York, NY',
+  //     period: '2018 - 2020',
+  //     description: 'Created responsive web applications and collaborated with UX/UI designers to deliver pixel-perfect interfaces for diverse clients.',
+  //     achievements: [
+  //       'Delivered 25+ client projects with 98% satisfaction rate',
+  //       'Implemented responsive designs reducing mobile bounce rate by 30%',
+  //       'Optimized web performance achieving 95+ Lighthouse scores',
+  //       'Established component library used across 10+ projects'
+  //     ],
+  //     color: 'from-purple-500 to-violet-500'
+  //   }
+  // ];
 
   const education = [
     {
       type: 'education',
-      degree: 'Bachelor of Science in Computer Science',
-      school: 'University of California, Berkeley',
-      location: 'Berkeley, CA',
-      period: '2014 - 2018',
-      description: 'Comprehensive computer science education with focus on software engineering, algorithms, and system design.',
+      degree: 'Bachelor of Computer Application',
+      school: 'Silver Oak University',
+      location: 'Gota, Ahmedabar',
+      period: '2023 - 2026',
+      description: 'Comprehensive computer education with focus on software engineering, algorithms.',
       achievements: [
-        'Graduated Magna Cum Laude with GPA: 3.8/4.0',
-        'Dean\'s List for 6 consecutive semesters',
-        'President of Computer Science Society (2017-2018)',
-        'Published research paper on machine learning algorithms'
+        'Participated in hackathons, coding competitions, or technical quizzes at the college or inter-college level.',
+        'Built and deployed real-world projects like portfolio websites, quiz apps, or management systems.',
+        'Created a GitHub profile with multiple self-developed projects and active contributions.',
+        'Current CGPA 8.86'
       ],
       color: 'from-orange-500 to-red-500'
     },
-    {
-      type: 'certification',
-      degree: 'AWS Certified Solutions Architect',
-      school: 'Amazon Web Services',
-      location: 'Online',
-      period: '2021',
-      description: 'Professional certification demonstrating expertise in designing distributed systems on AWS.',
+     {
+      type: 'education',
+      degree: '11 to 12',
+      school: 'Shree NV Patel Vidhyamandir',
+      location: 'Naroda, Ahmedabad',
+      period: '2021 - 2023',
+      description: 'I studied Commerce from Class 11 to 12, where I built a solid foundation in business, accounting, and economics that sparked my interest in finance and management.',
       achievements: [
-        'Scored 890/1000 on certification exam',
-        'Specialized in serverless architecture and microservices',
-        'Completed advanced cloud security training',
-        'Active member of AWS Community Builders program'
+        'Participated in commerce-related webinars or workshops.',
+        'Balanced academics with extracurriculars like sports, music, or volunteering',
+        'Developed interest in real-world business through reading financial newspapers or following the stock market.',
+        'Help my class mate with their project'
       ],
-      color: 'from-yellow-500 to-orange-500'
-    }
+      color: 'from-orange-500 to-red-500'
+    },
+
+    {
+      type: 'education',
+      degree: '1 to 10',
+      school: 'Lions Club School',
+      location: 'GIDC Naroda, Ahmedabad',
+      period: '2011 - 2021',
+      description: 'From Class 1 to 10, I focused on developing a strong overall academic base while exploring my interests across subjects like math, science, and language.',
+      achievements: [
+        'Built strong communication and discipline through school events and teamwork.',
+        'Served as a class monitor.',
+        'Actively participated in school competitions. ',
+      ],
+      color: 'from-orange-500 to-red-500'
+    },
+    // {
+    //   type: 'certification',
+    //   degree: 'AWS Certified Solutions Architect',
+    //   school: 'Amazon Web Services',
+    //   location: 'Online',
+    //   period: '2021',
+    //   description: 'Professional certification demonstrating expertise in designing distributed systems on AWS.',
+    //   achievements: [
+    //     'Scored 890/1000 on certification exam',
+    //     'Specialized in serverless architecture and microservices',
+    //     'Completed advanced cloud security training',
+    //     'Active member of AWS Community Builders program'
+    //   ],
+    //   color: 'from-yellow-500 to-orange-500'
+    // }
   ];
 
-  const allItems = [...experiences, ...education].sort((a, b) => {
+  const allItems = [ ...education].sort((a, b) => {
     const yearA = parseInt(a.period.split(' - ')[0]);
     const yearB = parseInt(b.period.split(' - ')[0]);
     return yearB - yearA;

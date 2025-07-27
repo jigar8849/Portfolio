@@ -1,73 +1,79 @@
 import React, { useState } from 'react';
-import { ExternalLink, Github, Laptop, ShoppingCart, MessageSquare, Calendar, Users, BarChart3, Filter } from 'lucide-react';
+import { ExternalLink, Github, Laptop, ShoppingCart, MessageSquare, Calendar, Users, BarChart3, Filter, Cloud } from 'lucide-react';
+import sms from '../assets/images/sms.jpeg';
+import airBNB from '../assets/images/airBNB.jpeg';
+import quizApp from '../assets/images/quizApp.png';
+import portfolio from '../assets/images/portfolio.png';
+import apple from '../assets/images/apple.png';
+import gitHubSearch from '../assets/images/gitHubSearch.png';
 
 const Projects: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState('All');
 
   const projects = [
     {
-      title: 'E-Commerce Platform',
-      description: 'Enterprise-grade e-commerce solution with advanced features including real-time inventory, payment processing, and analytics dashboard.',
-      image: 'https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=800',
-      tech: ['React', 'Node.js', 'MongoDB', 'Stripe', 'Redis'],
+      title: 'Society Management',
+      description: 'A comprehensive platform to manage residential societies, including billing, member records, maintenance, and complaints.',
+      image: sms,
+      tech: ['Node.js', "Express.js",'MongoDB', 'ejs'],
       category: 'Full Stack',
-      github: 'https://github.com/jigarprajapati/ecommerce-platform',
+      github: 'https://github.com/jigar8849/SMS',
       demo: 'https://ecommerce-demo.jigarprajapati.dev',
       icon: <ShoppingCart size={24} />,
       featured: true
     },
     {
-      title: 'Project Management Suite',
-      description: 'Comprehensive project management tool with real-time collaboration, advanced reporting, and team productivity analytics.',
-      image: 'https://images.pexels.com/photos/3182773/pexels-photo-3182773.jpeg?auto=compress&cs=tinysrgb&w=800',
-      tech: ['React', 'TypeScript', 'Socket.io', 'PostgreSQL', 'Docker'],
+      title: 'AirBNB',
+      description: 'An Airbnb-style platform where users can book stays and list their own properties, with features like authentication, property management, and booking system.',
+      image: airBNB,
+      tech: ['Node.js', "Express.js",'MongoDB', 'ejs',"cloud"],
       category: 'Full Stack',
-      github: 'https://github.com/jigarprajapati/project-management',
-      demo: 'https://pm-demo.jigarprajapati.dev',
+      github: 'https://github.com/jigar8849/AirBNB',
+      demo: 'https://airbnb-xgtg.onrender.com/listings',
       icon: <Calendar size={24} />,
       featured: true
     },
     {
-      title: 'Real-time Chat Platform',
-      description: 'Scalable messaging platform with end-to-end encryption, file sharing, video calls, and advanced moderation tools.',
-      image: 'https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&w=800',
-      tech: ['React', 'Socket.io', 'Node.js', 'MongoDB', 'WebRTC'],
-      category: 'Full Stack',
-      github: 'https://github.com/jigarprajapati/chat-platform',
+      title: 'Portfolio',
+      description: 'A personal portfolio showcasing my projects, skills, and background, with easy navigation across sections like About, Projects, Skills, and Contact.',
+      image: portfolio,
+      tech: ['React','JavaScript','HTML','CSS' ],
+      category: 'Frontend',
+      github: 'https://github.com/jigar8849/Portfolio',
       demo: 'https://chat-demo.jigarprajapati.dev',
       icon: <MessageSquare size={24} />,
       featured: false
     },
     {
-      title: 'Analytics Dashboard',
-      description: 'Interactive data visualization platform with real-time metrics, custom reports, and machine learning insights.',
-      image: 'https://images.pexels.com/photos/590041/pexels-photo-590041.jpeg?auto=compress&cs=tinysrgb&w=800',
-      tech: ['React', 'D3.js', 'Python', 'PostgreSQL', 'AWS'],
-      category: 'Frontend',
-      github: 'https://github.com/jigarprajapati/analytics-dashboard',
-      demo: 'https://analytics-demo.jigarprajapati.dev',
+      title: 'Quiz App',
+      description: 'A dynamic quiz application where users can answer multiple-choice questions, track their scores, and test their knowledge in real time.',
+      image: quizApp,
+      tech: ['Node.js', "Express.js",'MongoDB', 'ejs'],
+      category: 'Full Stack',
+      github: 'https://github.com/jigar8849/Quiz-App',
+      demo: 'https://quiz-app-seven-self.vercel.app/',
       icon: <BarChart3 size={24} />,
       featured: false
     },
     {
-      title: 'Team Collaboration Hub',
-      description: 'Enterprise collaboration platform with integrated video conferencing, document sharing, and workflow automation.',
-      image: 'https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=800',
-      tech: ['React', 'Node.js', 'WebRTC', 'PostgreSQL', 'Kubernetes'],
-      category: 'Full Stack',
-      github: 'https://github.com/jigarprajapati/collaboration-hub',
-      demo: 'https://collab-demo.jigarprajapati.dev',
+      title: 'AirPods',
+      description: 'A sleek, mobile-responsive Apple AirPods product page built with modern frontend technologies for a clean user experience.',
+      image: apple,
+      tech: ['HTML','CSS','JavaScript'],
+      category: 'Frontend',
+      github: 'https://github.com/jigar8849/AirPods',
+      demo: 'https://jigar-airpods.netlify.app/',
       icon: <Users size={24} />,
       featured: false
     },
     {
-      title: 'Developer Portfolio',
-      description: 'Modern, responsive portfolio website with advanced animations, dark mode, and optimized performance.',
-      image: 'https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800',
-      tech: ['React', 'TypeScript', 'Tailwind CSS', 'Framer Motion'],
+      title: 'GitHub Profile Search',
+      description: 'Displays GitHub user profiles using the GitHub API with real-time search functionality.',
+      image: gitHubSearch,
+      tech: ['HTML','CSS','JavaScript'],
       category: 'Frontend',
-      github: 'https://github.com/jigarprajapati/portfolio',
-      demo: 'https://jigarprajapati.dev',
+      github: 'https://github.com/jigar8849/GitHub-Search',
+      demo: 'https://github-search-jigar.netlify.app/',
       icon: <Laptop size={24} />,
       featured: false
     }

@@ -12,10 +12,10 @@ const Skills: React.FC = () => {
       skills: [
         { name: 'React', level: 95, icon: '⚛️' },
         { name: 'TypeScript', level: 92, icon: '🔷' },
-        { name: 'Next.js', level: 88, icon: '▲' },
-        { name: 'Tailwind CSS', level: 90, icon: '🎨' },
         { name: 'JavaScript', level: 95, icon: '🟨' },
-        { name: 'Vue.js', level: 80, icon: '💚' }
+        { name: 'Tailwind CSS', level: 90, icon: '🎨' },
+        { name: 'Bootstrap CSS', level: 80, icon: '🎨' },
+        { name: 'CSS', level: 95, icon: '🎨' },
       ]
     },
     {
@@ -27,10 +27,9 @@ const Skills: React.FC = () => {
       skills: [
         { name: 'Node.js', level: 93, icon: '🟢' },
         { name: 'Express.js', level: 90, icon: '🚀' },
-        { name: 'Python', level: 85, icon: '🐍' },
-        { name: 'GraphQL', level: 82, icon: '📊' },
+        { name: 'Python', level: 70, icon: '🐍' },
+        { name: 'API', level: 82, icon: '📊' },
         { name: 'REST APIs', level: 95, icon: '🔗' },
-        { name: 'Microservices', level: 78, icon: '🏗️' }
       ]
     },
     {
@@ -41,28 +40,25 @@ const Skills: React.FC = () => {
       borderColor: 'border-purple-200 dark:border-purple-800',
       skills: [
         { name: 'MongoDB', level: 90, icon: '🍃' },
-        { name: 'PostgreSQL', level: 88, icon: '🐘' },
-        { name: 'Redis', level: 85, icon: '🔴' },
-        { name: 'Prisma', level: 82, icon: '⚡' },
         { name: 'MySQL', level: 80, icon: '🐬' },
-        { name: 'Firebase', level: 75, icon: '🔥' }
+        
       ]
     },
-    {
-      title: 'DevOps & Cloud',
-      icon: <Globe size={28} />,
-      color: 'from-orange-500 to-red-500',
-      bgColor: 'bg-orange-50 dark:bg-orange-900/20',
-      borderColor: 'border-orange-200 dark:border-orange-800',
-      skills: [
-        { name: 'Docker', level: 88, icon: '🐳' },
-        { name: 'AWS', level: 85, icon: '☁️' },
-        { name: 'Kubernetes', level: 75, icon: '⚙️' },
-        { name: 'CI/CD', level: 82, icon: '🔄' },
-        { name: 'Nginx', level: 80, icon: '🌐' },
-        { name: 'Linux', level: 85, icon: '🐧' }
-      ]
-    }
+    // {
+    //   title: 'DevOps & Cloud',
+    //   icon: <Globe size={28} />,
+    //   color: 'from-orange-500 to-red-500',
+    //   bgColor: 'bg-orange-50 dark:bg-orange-900/20',
+    //   borderColor: 'border-orange-200 dark:border-orange-800',
+    //   skills: [
+    //     { name: 'Docker', level: 88, icon: '🐳' },
+    //     { name: 'AWS', level: 85, icon: '☁️' },
+    //     { name: 'Kubernetes', level: 75, icon: '⚙️' },
+    //     { name: 'CI/CD', level: 82, icon: '🔄' },
+    //     { name: 'Nginx', level: 80, icon: '🌐' },
+    //     { name: 'Linux', level: 85, icon: '🐧' }
+    //   ]
+    // }
   ];
 
   return (
@@ -142,9 +138,7 @@ const Skills: React.FC = () => {
             </h3>
             <div className="flex flex-wrap justify-center gap-4">
               {[
-                'Git', 'GitHub Actions', 'Jest', 'Cypress', 'Webpack', 'Vite', 
-                'Sass', 'Material-UI', 'Chakra UI', 'Framer Motion', 'Socket.io', 
-                'Stripe', 'Auth0', 'Vercel', 'Netlify', 'Heroku'
+                'Git', 'GitHub Actions', 'Vite', 'Vercel', 'Netlify',
               ].map((tech, index) => (
                 <span
                   key={index}

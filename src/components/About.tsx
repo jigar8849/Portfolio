@@ -21,18 +21,18 @@ const About: React.FC = () => {
       description: 'Optimizing data structures with MongoDB, PostgreSQL, and Redis for high performance',
       color: 'from-purple-500 to-violet-500'
     },
-    {
-      icon: <Globe size={24} />,
-      title: 'DevOps & Deployment',
-      description: 'Implementing CI/CD pipelines, containerization, and cloud infrastructure automation',
-      color: 'from-orange-500 to-red-500'
-    }
+    // {
+    //   icon: <Globe size={24} />,
+    //   title: 'DevOps & Deployment',
+    //   description: 'Implementing CI/CD pipelines, containerization, and cloud infrastructure automation',
+    //   color: 'from-orange-500 to-red-500'
+    // }
   ];
 
   const stats = [
-    { number: '50+', label: 'Projects Completed' },
-    { number: '3+', label: 'Years Experience' },
-    { number: '15+', label: 'Technologies Mastered' },
+    { number: '10+', label: 'Projects Completed' },
+    { number: '1+', label: 'Years Experience' },
+    { number: '8+', label: 'Technologies Mastered' },
     { number: '99%', label: 'Client Satisfaction' }
   ];
 
@@ -91,7 +91,7 @@ const About: React.FC = () => {
               </p>
 
               <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-                {['React', 'Node.js', 'TypeScript', 'MongoDB', 'PostgreSQL', 'Docker', 'AWS', 'GraphQL'].map((tech) => (
+                {['React', 'Node.js', 'TypeScript', 'MongoDB', 'Express.js', "Vercel", "GitHub", "Bootstrap"].map((tech) => (
                   <div
                     key={tech}
                     className="px-4 py-2 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl text-center text-sm font-medium text-gray-700 dark:text-gray-300 hover:border-blue-500 dark:hover:border-blue-400 transition-colors"

@@ -1,22 +1,32 @@
-import React from 'react';
-import { Github, Linkedin, Mail, ChevronDown, Code, Download } from 'lucide-react';
+import React from "react";
+import {
+  Github,
+  Linkedin,
+  Mail,
+  ChevronDown,
+  Code,
+  Download,
+} from "lucide-react";
 
 const Hero: React.FC = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     }
   };
 
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section
+      id="hero"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden"
+    >
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 dark:from-gray-900 dark:via-blue-900 dark:to-gray-900">
-        <div 
+        <div
           className="absolute inset-0 opacity-20"
           style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
           }}
         ></div>
       </div>
@@ -48,26 +58,31 @@ const Hero: React.FC = () => {
               </div>
 
               <p className="text-lg text-gray-400 mb-8 max-w-lg leading-relaxed">
-                Crafting scalable web applications with cutting-edge technologies. 
-                Specialized in React, Node.js, and cloud architecture.
+                Crafting scalable web applications with cutting-edge
+                technologies. Specialized in React, Node.js, and cloud
+                architecture.
               </p>
 
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <button
-                  onClick={() => scrollToSection('projects')}
+                  onClick={() => scrollToSection("projects")}
                   className="group bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 flex items-center justify-center"
                 >
                   <span>View My Work</span>
-                  <ChevronDown size={20} className="ml-2 group-hover:translate-y-1 transition-transform" />
+                  <ChevronDown
+                    size={20}
+                    className="ml-2 group-hover:translate-y-1 transition-transform"
+                  />
                 </button>
-                <button
-                  onClick={() => scrollToSection('contact')}
+                <a
+                  href="/Jigar_Resume.pdf"
+                  download
                   className="bg-white/10 backdrop-blur-sm border border-white/20 text-white hover:bg-white/20 px-8 py-4 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center"
                 >
                   <Download size={20} className="mr-2" />
                   Download CV
-                </button>
+                </a>
               </div>
 
               {/* Social Links */}
@@ -104,17 +119,40 @@ const Hero: React.FC = () => {
                   <div className="w-3 h-3 bg-red-500 rounded-full"></div>
                   <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
                   <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                  <span className="text-gray-400 text-sm ml-4">portfolio.tsx</span>
+                  <span className="text-gray-400 text-sm ml-4">
+                    portfolio.tsx
+                  </span>
                 </div>
                 <div className="font-mono text-sm">
-                  <div className="text-purple-400">const <span className="text-blue-400">developer</span> = {`{`}</div>
-                  <div className="ml-4 text-gray-300">name: <span className="text-green-400">'Jigar Prajapati'</span>,</div>
-                  <div className="ml-4 text-gray-300">role: <span className="text-green-400">'Full Stack Developer'</span>,</div>
+                  <div className="text-purple-400">
+                    const <span className="text-blue-400">developer</span> ={" "}
+                    {`{`}
+                  </div>
+                  <div className="ml-4 text-gray-300">
+                    name:{" "}
+                    <span className="text-green-400">'Jigar Prajapati'</span>,
+                  </div>
+                  <div className="ml-4 text-gray-300">
+                    role:{" "}
+                    <span className="text-green-400">
+                      'Full Stack Developer'
+                    </span>
+                    ,
+                  </div>
                   <div className="ml-4 text-gray-300">skills: [</div>
-                  <div className="ml-8 text-green-400">'React', 'Node.js', 'TypeScript',</div>
-                  <div className="ml-8 text-green-400">'MongoDB', 'PostgreSQL', 'AWS'</div>
+                  <div className="ml-8 text-green-400">
+                    'React', 'Node.js', 'Express.js',
+                  </div>
+                  <div className="ml-8 text-green-400">
+                    'MongoDB', 'GitHub', 'Vercel'
+                  </div>
                   <div className="ml-4 text-gray-300">],</div>
-                  <div className="ml-4 text-gray-300">passion: <span className="text-green-400">'Building amazing apps'</span></div>
+                  <div className="ml-4 text-gray-300">
+                    passion:{" "}
+                    <span className="text-green-400">
+                      'Building amazing apps'
+                    </span>
+                  </div>
                   <div className="text-purple-400">{`}`}</div>
                 </div>
               </div>
@@ -133,7 +171,7 @@ const Hero: React.FC = () => {
 
       {/* Scroll Indicator */}
       <button
-        onClick={() => scrollToSection('about')}
+        onClick={() => scrollToSection("about")}
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white/60 hover:text-white transition-colors animate-bounce"
       >
         <ChevronDown size={32} />
