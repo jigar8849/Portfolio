@@ -76,7 +76,7 @@ const Contact: React.FC = () => {
     {
       icon: <MapPin className="w-6 h-6" />,
       title: 'Location',
-      value: 'Ahmdedabad, Gujrat, India',
+      value: 'Ahmedabad, Gujarat, India',
       description: 'Available for local meetings',
       color: 'from-purple-500 to-violet-500',
       bgColor: 'bg-purple-50 dark:bg-purple-900/20',
