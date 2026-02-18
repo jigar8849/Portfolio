@@ -1,10 +1,10 @@
 import { Github, ExternalLink, ArrowRight } from 'lucide-react';
 import sms from '../assets/images/sms.jpeg';
 import airBNB from '../assets/images/airBNB.jpeg';
-import quizApp from '../assets/images/quizApp.png';
+import nordicLegal from '../assets/images/nordicLegal.png';
 import portfolio from '../assets/images/portfolio.png';
 import apple from '../assets/images/apple.png';
-import gitHubSearch from '../assets/images/gitHubSearch.png';
+import quickcheckin from '../assets/images/quickcheckin.png';
 
 const Projects = () => {
   // Removed unused state variable activeProject for cleaner code
@@ -18,10 +18,34 @@ const Projects = () => {
       image: sms,
       tech: ['Node.js', 'Express', 'MongoDB'],
       links: {
-        demo: 'https://ecommerce-demo.jigarprajapati.dev',
+        demo: 'https://next-sms-frontend-6mwm.vercel.app/',
         code: 'https://github.com/jigar8849/SMS'
       },
-      year: '2024'
+      year: '2025'
+    },
+    {
+      title: 'QuickCheckin',
+      category: 'SaaS / Restaurant Management',
+      description: 'A modern digital waitlist and reservation system designed to help restaurants manage bookings, reduce wait times, and improve customer experience.',
+      image: quickcheckin,
+      tech: ['React', 'Node.js', 'MongoDB'],
+      links: {
+        demo: 'https://www.quickcheckin.ca/',
+        code: ''
+      },
+      year: '2025'
+    },
+    {
+      title: 'Nordic Legal Consulting',
+      category: 'Business Website / Legal Services',
+      description: 'A bilingual legal consulting website offering guidance on family reunification, EU law, visas, and residence permits across Denmark, Sweden, and Germany, with integrated consultation requests and AI-assisted support.',
+      image: nordicLegal,
+      tech: ['React.js', 'Formspree', 'Gemini AI'],
+      links: {
+        demo: 'https://nordiclegalconsulting.dk/',
+        code: ''
+      },
+      year: '2025'
     },
     {
       title: 'AirBNB Clone',
@@ -33,7 +57,7 @@ const Projects = () => {
         demo: 'https://airbnb-xgtg.onrender.com/listings',
         code: 'https://github.com/jigar8849/AirBNB'
       },
-      year: '2023'
+      year: '2024'
     },
     {
       title: 'Personal Portfolio',
@@ -42,23 +66,14 @@ const Projects = () => {
       image: portfolio,
       tech: ['React', 'Tailwind', 'Vite'],
       links: {
-        demo: 'https://chat-demo.jigarprajapati.dev',
+        demo: 'jigarprajapati.me',
         code: 'https://github.com/jigar8849/Portfolio'
       },
       year: '2024'
     },
-    {
-      title: 'Quiz Application',
-      category: 'Interactive App',
-      description: 'Real-time quiz application featuring score tracking, multiple categories, and an engaging user interface for taking tests.',
-      image: quizApp,
-      tech: ['Node.js', 'Express', 'EJS'],
-      links: {
-        demo: 'https://quiz-app-seven-self.vercel.app/',
-        code: 'https://github.com/jigar8849/Quiz-App'
-      },
-      year: '2023'
-    },
+
+
+
     {
       title: 'AirPods Landing Page',
       category: 'UI/UX Replica',
@@ -69,20 +84,9 @@ const Projects = () => {
         demo: 'https://jigar-airpods.netlify.app/',
         code: 'https://github.com/jigar8849/AirPods'
       },
-      year: '2022'
-    },
-    {
-      title: 'GitHub Search',
-      category: 'Utility Tool',
-      description: 'A useful tool to search GitHub users and instantly view their repositories, followers, and other profile statistics in real-time.',
-      image: gitHubSearch,
-      tech: ['React', 'GitHub API'],
-      links: {
-        demo: 'https://github-search-jigar.netlify.app/',
-        code: 'https://github.com/jigar8849/GitHub-Search'
-      },
       year: '2023'
-    }
+    },
+
   ];
 
   return (
