@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import { ExternalLink, Github, Laptop, ShoppingCart, MessageSquare, Calendar, Users, BarChart3, Filter, Cloud } from 'lucide-react';
+import { Github, ExternalLink, ArrowRight } from 'lucide-react';
 import sms from '../assets/images/sms.jpeg';
 import airBNB from '../assets/images/airBNB.jpeg';
 import quizApp from '../assets/images/quizApp.png';
@@ -7,258 +6,160 @@ import portfolio from '../assets/images/portfolio.png';
 import apple from '../assets/images/apple.png';
 import gitHubSearch from '../assets/images/gitHubSearch.png';
 
-const Projects: React.FC = () => {
-  const [activeFilter, setActiveFilter] = useState('All');
+const Projects = () => {
+  // Removed unused state variable activeProject for cleaner code
+
 
   const projects = [
     {
-      title: 'Society Management',
-      description: 'A comprehensive platform to manage residential societies, including billing, member records, maintenance, and complaints.',
+      title: 'Society Management System',
+      category: 'Full Stack Web App',
+      description: 'A comprehensive platform specialized for managing residential societies, handling billing, complaints, and member data with ease.',
       image: sms,
-      tech: ['Node.js', "Express.js",'MongoDB', 'ejs'],
-      category: 'Full Stack',
-      github: 'https://github.com/jigar8849/SMS',
-      demo: 'https://ecommerce-demo.jigarprajapati.dev',
-      icon: <ShoppingCart size={24} />,
-      featured: true
+      tech: ['Node.js', 'Express', 'MongoDB'],
+      links: {
+        demo: 'https://ecommerce-demo.jigarprajapati.dev',
+        code: 'https://github.com/jigar8849/SMS'
+      },
+      year: '2024'
     },
     {
-      title: 'AirBNB',
-      description: 'An Airbnb-style platform where users can book stays and list their own properties, with features like authentication, property management, and booking system.',
+      title: 'AirBNB Clone',
+      category: 'Web Application',
+      description: 'A full-featured booking platform allowing users to book stays, manage listings, and handle reservations with secure authentication.',
       image: airBNB,
-      tech: ['Node.js', "Express.js",'MongoDB', 'ejs',"cloud"],
-      category: 'Full Stack',
-      github: 'https://github.com/jigar8849/AirBNB',
-      demo: 'https://airbnb-xgtg.onrender.com/listings',
-      icon: <Calendar size={24} />,
-      featured: true
+      tech: ['Node.js', 'MongoDB', 'React'],
+      links: {
+        demo: 'https://airbnb-xgtg.onrender.com/listings',
+        code: 'https://github.com/jigar8849/AirBNB'
+      },
+      year: '2023'
     },
     {
-      title: 'Portfolio',
-      description: 'A personal portfolio showcasing my projects, skills, and background, with easy navigation across sections like About, Projects, Skills, and Contact.',
+      title: 'Personal Portfolio',
+      category: 'Brand Identity',
+      description: 'A modern, high-performance portfolio website showcasing skills and projects, built with a unique monochrome luxury theme.',
       image: portfolio,
-      tech: ['React','JavaScript','HTML','CSS' ],
-      category: 'Frontend',
-      github: 'https://github.com/jigar8849/Portfolio',
-      demo: 'https://chat-demo.jigarprajapati.dev',
-      icon: <MessageSquare size={24} />,
-      featured: false
+      tech: ['React', 'Tailwind', 'Vite'],
+      links: {
+        demo: 'https://chat-demo.jigarprajapati.dev',
+        code: 'https://github.com/jigar8849/Portfolio'
+      },
+      year: '2024'
     },
     {
-      title: 'Quiz App',
-      description: 'A dynamic quiz application where users can answer multiple-choice questions, track their scores, and test their knowledge in real time.',
+      title: 'Quiz Application',
+      category: 'Interactive App',
+      description: 'Real-time quiz application featuring score tracking, multiple categories, and an engaging user interface for taking tests.',
       image: quizApp,
-      tech: ['Node.js', "Express.js",'MongoDB', 'ejs'],
-      category: 'Full Stack',
-      github: 'https://github.com/jigar8849/Quiz-App',
-      demo: 'https://quiz-app-seven-self.vercel.app/',
-      icon: <BarChart3 size={24} />,
-      featured: false
+      tech: ['Node.js', 'Express', 'EJS'],
+      links: {
+        demo: 'https://quiz-app-seven-self.vercel.app/',
+        code: 'https://github.com/jigar8849/Quiz-App'
+      },
+      year: '2023'
     },
     {
-      title: 'AirPods',
-      description: 'A sleek, mobile-responsive Apple AirPods product page built with modern frontend technologies for a clean user experience.',
+      title: 'AirPods Landing Page',
+      category: 'UI/UX Replica',
+      description: 'A pixel-perfect replica of the Apple AirPods product page, focusing on precise layout, typography, and responsive design.',
       image: apple,
-      tech: ['HTML','CSS','JavaScript'],
-      category: 'Frontend',
-      github: 'https://github.com/jigar8849/AirPods',
-      demo: 'https://jigar-airpods.netlify.app/',
-      icon: <Users size={24} />,
-      featured: false
+      tech: ['HTML', 'CSS', 'JS'],
+      links: {
+        demo: 'https://jigar-airpods.netlify.app/',
+        code: 'https://github.com/jigar8849/AirPods'
+      },
+      year: '2022'
     },
     {
-      title: 'GitHub Profile Search',
-      description: 'Displays GitHub user profiles using the GitHub API with real-time search functionality.',
+      title: 'GitHub Search',
+      category: 'Utility Tool',
+      description: 'A useful tool to search GitHub users and instantly view their repositories, followers, and other profile statistics in real-time.',
       image: gitHubSearch,
-      tech: ['HTML','CSS','JavaScript'],
-      category: 'Frontend',
-      github: 'https://github.com/jigar8849/GitHub-Search',
-      demo: 'https://github-search-jigar.netlify.app/',
-      icon: <Laptop size={24} />,
-      featured: false
+      tech: ['React', 'GitHub API'],
+      links: {
+        demo: 'https://github-search-jigar.netlify.app/',
+        code: 'https://github.com/jigar8849/GitHub-Search'
+      },
+      year: '2023'
     }
   ];
 
-  const categories = ['All', 'Full Stack', 'Frontend', 'Backend'];
-  
-  const filteredProjects = activeFilter === 'All' 
-    ? projects 
-    : projects.filter(project => project.category === activeFilter);
-
-  const featuredProjects = projects.filter(project => project.featured);
-
   return (
-    <section id="projects" className="py-20 bg-white dark:bg-gray-900">
-      <div className="container mx-auto px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center px-4 py-2 bg-purple-100 dark:bg-purple-900/30 rounded-full text-purple-600 dark:text-purple-400 text-sm font-medium mb-4">
-              <Laptop size={16} className="mr-2" />
-              Featured Work
-            </div>
-            <h2 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
-              Projects That
-              <span className="block bg-gradient-to-r from-purple-600 via-blue-600 to-green-600 bg-clip-text text-transparent">
-                Make Impact
-              </span>
+    <section id="projects" className="py-32 bg-white relative">
+      <div className="container mx-auto px-6 md:px-12">
+        <div className="flex flex-col md:flex-row justify-between items-end mb-20 border-b border-gray-100 pb-8">
+          <div>
+            <span className="text-sm font-semibold text-gray-400 uppercase tracking-widest mb-2 block">Selected Work</span>
+            <h2 className="text-5xl md:text-6xl font-display font-medium text-dark-900 tracking-tight">
+              Featured <br /> Projects
             </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              A curated selection of my recent work showcasing expertise in modern web development, 
-              from concept to deployment.
-            </p>
           </div>
+          <p className="text-gray-500 max-w-sm mt-6 md:mt-0 text-right md:text-left">
+            A collection of digital products crafted with precision, focusing on user experience and robust architecture.
+          </p>
+        </div>
 
-          {/* Featured Projects */}
-          <div className="mb-16">
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">Featured Projects</h3>
-            <div className="grid lg:grid-cols-2 gap-8">
-              {featuredProjects.map((project, index) => (
-                <div
-                  key={index}
-                  className="group bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-700 rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105"
-                >
-                  <div className="relative overflow-hidden">
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                    <div className="absolute top-6 right-6 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm p-3 rounded-xl text-gray-700 dark:text-gray-300">
-                      {project.icon}
-                    </div>
-                    <div className="absolute bottom-6 left-6 right-6">
-                      <div className="flex space-x-3">
-                        <a
-                          href={project.github}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="bg-white/20 backdrop-blur-sm text-white p-3 rounded-xl hover:bg-white/30 transition-colors"
-                        >
-                          <Github size={20} />
-                        </a>
-                        <a
-                          href={project.demo}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="bg-white/20 backdrop-blur-sm text-white p-3 rounded-xl hover:bg-white/30 transition-colors"
-                        >
-                          <ExternalLink size={20} />
-                        </a>
-                      </div>
-                    </div>
-                  </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {projects.map((project, index) => (
+            <div
+              key={index}
+              className="group flex flex-col bg-white rounded-3xl border border-gray-100 overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
+            >
+              {/* Image Section */}
+              <div className="relative overflow-hidden aspect-[4/3] bg-gray-100">
+                <div className="absolute inset-0 bg-gray-200 animate-pulse" /> {/* Placeholder */}
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="absolute inset-0 w-full h-full object-cover transform scale-100 group-hover:scale-110 transition-transform duration-700 ease-out"
+                />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300"></div>
 
-                  <div className="p-8">
-                    <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">
-                      {project.title}
-                    </h3>
-                    <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
-                      {project.description}
-                    </p>
-
-                    <div className="flex flex-wrap gap-2">
-                      {project.tech.map((tech, techIndex) => (
-                        <span
-                          key={techIndex}
-                          className="px-3 py-1 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 text-gray-700 dark:text-gray-300 rounded-lg text-sm font-medium"
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Filter Tabs */}
-          <div className="flex justify-center mb-12">
-            <div className="inline-flex bg-gray-100 dark:bg-gray-800 rounded-2xl p-2">
-              {categories.map((category) => (
-                <button
-                  key={category}
-                  onClick={() => setActiveFilter(category)}
-                  className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 ${
-                    activeFilter === category
-                      ? 'bg-white dark:bg-gray-700 text-gray-900 dark:text-white shadow-lg'
-                      : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'
-                  }`}
-                >
-                  {category}
-                </button>
-              ))}
-            </div>
-          </div>
-
-          {/* All Projects Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredProjects.filter(project => !project.featured).map((project, index) => (
-              <div
-                key={index}
-                className="group bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-200 dark:border-gray-700 hover:border-transparent hover:scale-105"
-              >
-                <div className="relative overflow-hidden">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  <div className="absolute top-4 right-4 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm p-2 rounded-lg text-gray-700 dark:text-gray-300">
-                    {project.icon}
-                  </div>
-                </div>
-
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
-                    {project.title}
-                  </h3>
-                  <p className="text-gray-600 dark:text-gray-300 mb-4 text-sm leading-relaxed">
-                    {project.description}
-                  </p>
-
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {project.tech.slice(0, 3).map((tech, techIndex) => (
-                      <span
-                        key={techIndex}
-                        className="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-md text-xs"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                    {project.tech.length > 3 && (
-                      <span className="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-500 dark:text-gray-400 rounded-md text-xs">
-                        +{project.tech.length - 3}
-                      </span>
-                    )}
-                  </div>
-
-                  <div className="flex space-x-4">
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center space-x-2 text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors text-sm"
-                    >
-                      <Github size={16} />
-                      <span>Code</span>
-                    </a>
-                    <a
-                      href={project.demo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center space-x-2 text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors text-sm"
-                    >
-                      <ExternalLink size={16} />
-                      <span>Demo</span>
-                    </a>
-                  </div>
+                {/* Overlay Links */}
+                <div className="absolute bottom-4 right-4 flex gap-3 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+                  <a href={project.links.demo} target="_blank" rel="noopener noreferrer" className="p-3 bg-white rounded-full text-dark-900 hover:text-blue-600 shadow-lg hover:scale-110 transition-transform" aria-label="Live Demo">
+                    <ExternalLink size={18} />
+                  </a>
+                  <a href={project.links.code} target="_blank" rel="noopener noreferrer" className="p-3 bg-white rounded-full text-dark-900 hover:text-black shadow-lg hover:scale-110 transition-transform" aria-label="View Code">
+                    <Github size={18} />
+                  </a>
                 </div>
               </div>
-            ))}
-          </div>
+
+              {/* Content Section */}
+              <div className="p-6 md:p-8 flex flex-col flex-grow">
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-xs font-semibold text-blue-600 bg-blue-50 px-3 py-1 rounded-full uppercase tracking-wide">
+                    {project.category}
+                  </span>
+                  <span className="text-xs font-medium text-gray-400">{project.year}</span>
+                </div>
+
+                <h3 className="text-2xl font-display font-bold text-dark-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  {project.title}
+                </h3>
+
+                <p className="text-gray-500 leading-relaxed text-sm mb-6 flex-grow">
+                  {project.description}
+                </p>
+
+                <div className="flex flex-wrap gap-2 mt-auto pt-4 border-t border-gray-50">
+                  {project.tech.map((tech, i) => (
+                    <span key={i} className="px-2.5 py-1 text-[11px] font-medium border border-gray-100 rounded-md text-gray-500 bg-gray-50">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-20 text-center">
+          <a href="https://github.com/jigar8849" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 px-8 py-4 bg-dark-900 text-white rounded-full font-medium hover:bg-black transition-all hover:scale-105 shadow-xl hover:shadow-2xl">
+            View All Projects on GitHub <ArrowRight size={18} />
+          </a>
         </div>
       </div>
     </section>

@@ -1,249 +1,103 @@
-import React from 'react';
-import { Calendar, MapPin, Briefcase, GraduationCap, Award, TrendingUp } from 'lucide-react';
+import { Briefcase, GraduationCap, Award } from 'lucide-react';
 
-const Experience: React.FC = () => {
-  // const experiences = [
-  //   {
-  //     type: 'work',
-  //     title: 'Senior Full Stack Developer',
-  //     company: 'TechCorp Solutions',
-  //     location: 'San Francisco, CA',
-  //     period: '2022 - Present',
-  //     description: 'Leading development of enterprise-scale applications serving 100K+ users. Architecting microservices and implementing DevOps best practices.',
-  //     achievements: [
-  //       'Improved application performance by 40% through optimization and caching strategies',
-  //       'Led a cross-functional team of 8 developers across multiple high-impact projects',
-  //       'Implemented automated testing pipeline reducing production bugs by 65%',
-  //       'Mentored 5 junior developers and established coding standards'
-  //     ],
-  //     color: 'from-blue-500 to-cyan-500'
-  //   },
-  //   {
-  //     type: 'work',
-  //     title: 'Full Stack Developer',
-  //     company: 'InnovateTech Startup',
-  //     location: 'Remote',
-  //     period: '2020 - 2022',
-  //     description: 'Built scalable web applications from concept to deployment. Collaborated with product and design teams to deliver user-centric solutions.',
-  //     achievements: [
-  //       'Developed 5 major features that increased user engagement by 35%',
-  //       'Integrated 15+ third-party APIs and payment processing systems',
-  //       'Optimized database queries improving response times by 50%',
-  //       'Established CI/CD pipeline reducing deployment time by 80%'
-  //     ],
-  //     color: 'from-green-500 to-emerald-500'
-  //   },
-  //   {
-  //     type: 'work',
-  //     title: 'Frontend Developer',
-  //     company: 'WebDev Agency',
-  //     location: 'New York, NY',
-  //     period: '2018 - 2020',
-  //     description: 'Created responsive web applications and collaborated with UX/UI designers to deliver pixel-perfect interfaces for diverse clients.',
-  //     achievements: [
-  //       'Delivered 25+ client projects with 98% satisfaction rate',
-  //       'Implemented responsive designs reducing mobile bounce rate by 30%',
-  //       'Optimized web performance achieving 95+ Lighthouse scores',
-  //       'Established component library used across 10+ projects'
-  //     ],
-  //     color: 'from-purple-500 to-violet-500'
-  //   }
-  // ];
-
-  const education = [
+const Experience = () => {
+  const experiences = [
     {
+      id: 1,
       type: 'education',
-      degree: 'Bachelor of Computer Application',
-      school: 'Silver Oak University',
-      location: 'Gota, Ahmedabar',
+      title: 'Bachelor of Computer Application',
+      organization: 'Silver Oak University',
       period: '2023 - 2026',
-      description: 'Comprehensive computer education with focus on software engineering, algorithms.',
-      achievements: [
-        'Participated in hackathons, coding competitions, or technical quizzes at the college or inter-college level.',
-        'Built and deployed real-world projects like portfolio websites, quiz apps, or management systems.',
-        'Created a GitHub profile with multiple self-developed projects and active contributions.',
-        'Current CGPA 8.86'
-      ],
-      color: 'from-orange-500 to-red-500'
+      description: 'Specializing in advanced software engineering, cloud architecture, and full-stack development methodologies.',
+      tags: ['Software Engineering', 'Cloud Computing', 'Data Structures'],
+      icon: <GraduationCap className="text-white" size={20} />,
+      color: 'from-dark-900 to-dark-700',
+      glow: 'shadow-sm'
     },
-     {
-      type: 'education',
-      degree: '11 to 12',
-      school: 'Shree NV Patel Vidhyamandir',
-      location: 'Naroda, Ahmedabad',
-      period: '2021 - 2023',
-      description: 'I studied Commerce from Class 11 to 12, where I built a solid foundation in business, accounting, and economics that sparked my interest in finance and management.',
-      achievements: [
-        'Participated in commerce-related webinars or workshops.',
-        'Balanced academics with extracurriculars like sports, music, or volunteering',
-        'Developed interest in real-world business through reading financial newspapers or following the stock market.',
-        'Help my class mate with their project'
-      ],
-      color: 'from-orange-500 to-red-500'
-    },
-
     {
+      id: 2,
       type: 'education',
-      degree: '1 to 10',
-      school: 'Lions Club School',
-      location: 'GIDC Naroda, Ahmedabad',
-      period: '2011 - 2021',
-      description: 'From Class 1 to 10, I focused on developing a strong overall academic base while exploring my interests across subjects like math, science, and language.',
-      achievements: [
-        'Built strong communication and discipline through school events and teamwork.',
-        'Served as a class monitor.',
-        'Actively participated in school competitions. ',
-      ],
-      color: 'from-orange-500 to-red-500'
+      title: 'Higher Secondary (Commerce)',
+      organization: 'Shree NV Patel Vidhyamandir',
+      period: '2021 - 2023',
+      description: 'Built a strong analytical foundation with focus on economics, business statistics, and organizational management.',
+      tags: ['Business Economics', 'Statistics', 'Management'],
+      icon: <Award className="text-white" size={20} />,
+      color: 'from-dark-700 to-dark-500',
+      glow: 'shadow-sm'
     },
-    // {
-    //   type: 'certification',
-    //   degree: 'AWS Certified Solutions Architect',
-    //   school: 'Amazon Web Services',
-    //   location: 'Online',
-    //   period: '2021',
-    //   description: 'Professional certification demonstrating expertise in designing distributed systems on AWS.',
-    //   achievements: [
-    //     'Scored 890/1000 on certification exam',
-    //     'Specialized in serverless architecture and microservices',
-    //     'Completed advanced cloud security training',
-    //     'Active member of AWS Community Builders program'
-    //   ],
-    //   color: 'from-yellow-500 to-orange-500'
-    // }
+    {
+      id: 3,
+      type: 'education',
+      title: 'Secondary Education',
+      organization: 'Lions Club School',
+      period: '2011 - 2021',
+      description: 'Cultivated leadership skills and academic excellence through various extracurricular achievements.',
+      tags: ['Leadership', 'Academic Excellence', 'Teamwork'],
+      icon: <Briefcase className="text-white" size={20} />,
+      color: 'from-dark-600 to-dark-400',
+      glow: 'shadow-sm'
+    }
   ];
 
-  const allItems = [ ...education].sort((a, b) => {
-    const yearA = parseInt(a.period.split(' - ')[0]);
-    const yearB = parseInt(b.period.split(' - ')[0]);
-    return yearB - yearA;
-  });
-
-  const getIcon = (type: string) => {
-    switch (type) {
-      case 'work':
-        return <Briefcase className="w-6 h-6" />;
-      case 'education':
-        return <GraduationCap className="w-6 h-6" />;
-      case 'certification':
-        return <Award className="w-6 h-6" />;
-      default:
-        return <Briefcase className="w-6 h-6" />;
-    }
-  };
-
   return (
-    <section id="experience" className="py-20 bg-white dark:bg-gray-900">
-      <div className="container mx-auto px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center px-4 py-2 bg-orange-100 dark:bg-orange-900/30 rounded-full text-orange-600 dark:text-orange-400 text-sm font-medium mb-4">
-              <TrendingUp size={16} className="mr-2" />
-              Career Journey
-            </div>
-            <h2 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
-              Experience &
-              <span className="block bg-gradient-to-r from-orange-600 via-red-600 to-purple-600 bg-clip-text text-transparent">
-                Education
-              </span>
-            </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              A journey of continuous learning, growth, and delivering impactful solutions 
-              across diverse technologies and industries.
-            </p>
-          </div>
+    <section id="experience" className="py-24 relative bg-light-50 overflow-hidden">
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="text-center mb-20">
+          <h2 className="section-title text-dark-900">
+            Academic <span className="text-transparent bg-clip-text bg-gradient-to-r from-dark-900 to-dark-600">Milestones</span>
+          </h2>
+          <p className="text-dark-500 max-w-2xl mx-auto text-lg leading-relaxed">
+            The educational foundation that powers my technical expertise and problem-solving abilities.
+          </p>
+        </div>
 
-          <div className="relative">
-            {/* Timeline Line */}
-            <div className="absolute left-8 top-0 bottom-0 w-1 bg-gradient-to-b from-blue-500 via-purple-500 to-orange-500 rounded-full"></div>
+        <div className="max-w-4xl mx-auto relative">
+          {/* Vertical Timeline Line */}
+          <div className="absolute left-[20px] md:left-1/2 top-0 bottom-0 w-px md:-ml-[0.5px] bg-dark-200"></div>
 
-            <div className="space-y-12">
-              {allItems.map((item, index) => (
-                <div key={index} className="relative flex items-start group">
-                  {/* Timeline Dot */}
-                  <div className={`absolute left-6 w-6 h-6 rounded-full bg-gradient-to-r ${item.color} border-4 border-white dark:border-gray-900 shadow-lg group-hover:scale-125 transition-transform z-10`}>
-                  </div>
+          <div className="space-y-12">
+            {experiences.map((exp, index) => (
+              <div key={exp.id} className={`relative flex flex-col md:flex-row items-center ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
 
-                  {/* Content */}
-                  <div className="ml-20 w-full">
-                    <div className={`bg-gradient-to-br ${item.color} p-[1px] rounded-2xl group-hover:scale-105 transition-all duration-300`}>
-                      <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 h-full">
-                        <div className="flex items-start justify-between mb-6">
-                          <div className="flex-1">
-                            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
-                              {item.type === 'work' ? item.title : item.degree}
-                            </h3>
-                            <p className="text-xl text-blue-600 dark:text-blue-400 font-semibold mb-2">
-                              {item.type === 'work' ? item.company : item.school}
-                            </p>
-                            <div className="flex items-center space-x-4 text-gray-600 dark:text-gray-300 mb-4">
-                              <div className="flex items-center space-x-1">
-                                <Calendar size={16} />
-                                <span className="text-sm font-medium">{item.period}</span>
-                              </div>
-                              <div className="flex items-center space-x-1">
-                                <MapPin size={16} />
-                                <span className="text-sm font-medium">{item.location}</span>
-                              </div>
-                            </div>
-                          </div>
-                          <div className={`p-4 rounded-xl bg-gradient-to-r ${item.color} text-white`}>
-                            {getIcon(item.type)}
-                          </div>
-                        </div>
+                {/* Timeline Center Node */}
+                <div className="absolute left-[20px] md:left-1/2 -ml-[12px] md:-ml-3 w-6 h-6 rounded-full bg-white border-4 border-dark-900 z-20 shadow-md flex items-center justify-center">
+                  <div className="w-1.5 h-1.5 bg-dark-900 rounded-full"></div>
+                </div>
 
-                        <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
-                          {item.description}
-                        </p>
+                {/* Content Card Wrapper */}
+                <div className={`w-full md:w-1/2 ${index % 2 === 0 ? 'pl-16 md:pl-0 md:pr-16' : 'pl-16 md:pl-16'}`}>
+                  <div className={`bg-white p-8 rounded-2xl border border-dark-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group relative overflow-hidden ${exp.glow}`}>
 
-                        <div className="space-y-3">
-                          <h4 className="text-lg font-semibold text-gray-900 dark:text-white">
-                            Key Achievements:
-                          </h4>
-                          <ul className="space-y-2">
-                            {item.achievements.map((achievement, achievementIndex) => (
-                              <li key={achievementIndex} className="flex items-start space-x-3">
-                                <div className={`w-2 h-2 rounded-full bg-gradient-to-r ${item.color} mt-2 flex-shrink-0`}></div>
-                                <span className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                                  {achievement}
-                                </span>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
+                    {/* Accent Bar */}
+                    <div className={`absolute top-0 left-0 w-1.5 h-full bg-gradient-to-b ${exp.color}`}></div>
+
+                    <div className="flex items-center gap-4 mb-4">
+                      <div className={`p-3 rounded-xl bg-gradient-to-br ${exp.color} shadow-md`}>
+                        {exp.icon}
                       </div>
+                      <span className="text-sm font-mono text-dark-600 bg-dark-50 px-3 py-1 rounded-full border border-dark-100">
+                        {exp.period}
+                      </span>
+                    </div>
+
+                    <h3 className="text-2xl font-bold text-dark-900 mb-2 font-display">{exp.title}</h3>
+                    <p className="text-primary font-medium mb-4">{exp.organization}</p>
+                    <p className="text-dark-500 text-sm mb-6 leading-relaxed border-l-2 border-dark-100 pl-4">
+                      {exp.description}
+                    </p>
+
+                    <div className="flex flex-wrap gap-2">
+                      {exp.tags.map((tag, i) => (
+                        <span key={i} className="px-3 py-1 text-xs font-medium rounded-full bg-light-50 text-dark-600 border border-dark-100 group-hover:border-dark-300 transition-colors">
+                          {tag}
+                        </span>
+                      ))}
                     </div>
                   </div>
                 </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Skills Gained */}
-          <div className="mt-16 text-center">
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">
-              Skills Developed Throughout Journey
-            </h3>
-            <div className="grid md:grid-cols-3 gap-6">
-              <div className="bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20 p-6 rounded-2xl border border-blue-200 dark:border-blue-800">
-                <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">Technical Skills</h4>
-                <p className="text-gray-600 dark:text-gray-300 text-sm">
-                  Advanced proficiency in modern web technologies, cloud platforms, and development methodologies.
-                </p>
               </div>
-              <div className="bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 p-6 rounded-2xl border border-green-200 dark:border-green-800">
-                <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">Leadership</h4>
-                <p className="text-gray-600 dark:text-gray-300 text-sm">
-                  Team leadership, mentoring, project management, and cross-functional collaboration.
-                </p>
-              </div>
-              <div className="bg-gradient-to-br from-purple-50 to-violet-50 dark:from-purple-900/20 dark:to-violet-900/20 p-6 rounded-2xl border border-purple-200 dark:border-purple-800">
-                <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">Problem Solving</h4>
-                <p className="text-gray-600 dark:text-gray-300 text-sm">
-                  Complex system design, performance optimization, and innovative solution development.
-                </p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
